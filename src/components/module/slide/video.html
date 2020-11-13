@@ -1,0 +1,25 @@
+<div class="swiper-slide">
+  <div class="video-container video-container--full">
+    <video
+      src="@@videoUrl"
+      class="video"
+      muted
+      loop
+      playsinline
+      webkit-playsinline
+      preload="true"
+    ></video>
+    
+    <div class="video__cover" @@if(context.cover) {style="background-image:url(@@cover)"}></div>
+    
+    <div class="video__controller">
+      <button type="button" class="button-video-play">
+        <i class="sprite-icon sprite-icon-play-big">Play</i>
+        <i class="sprite-icon sprite-icon-pause-big">Pause</i>
+      </button>
+      <p class="video-title">
+        디스커버리 백팩과 함께하는 여행
+      </p>
+    </div>
+  </div>
+</div>

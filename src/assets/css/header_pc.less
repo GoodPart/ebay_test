@@ -1,0 +1,171 @@
+@import '../../components/fonts/index.less';
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background: #fff;
+}
+
+.header_inner {
+  font-family: @base-font-family;
+  position: relative;
+  margin: 0 auto;
+  // padding: 0 140px; //js로 넓이 스크롤만큼 빼기 -17px
+  padding: 0 123px 0 140px;
+  min-width: 1640px;
+}
+
+.header__block {
+  display: block;
+  height: 80px;
+
+  &:after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+}
+
+.tit_logo {
+  float: left;
+  margin-right: 91px;
+  // align-self: center;
+
+  img {
+    margin-top: 28px;
+  }
+}
+
+.header_gnb {
+  float: left;
+}
+
+.header_list {
+  display: flex;
+  height: 80px;
+}
+
+.header_list__list--item {
+  // position: relative;
+  margin-right: 65px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+  &.on {
+    > .link_gnb {
+      color: #3c67e1;
+    }
+    .header_list__sub-box {
+      display: block;
+    }
+    .line {
+      width: 100%;
+    }
+  }
+}
+
+.link_gnb {
+  position: relative;
+  display: block;
+  height: 80px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 80px;
+  padding: 0 4px 0 5px;
+  color: #363636;
+}
+
+.header_list__sub-box {
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background: #eef0f1;
+  box-sizing: border-box;
+  border: 1px solid #d2d2d2;
+}
+
+.list_sub__item {
+  height: 60px;
+  margin-right: 65px;
+
+  > .link_gnb:hover {
+    color: #3c67e1;
+  }
+
+  //마지막 CSS, after 막대 없애기
+  &:last-child {
+    margin-right: 0;
+
+    .link_gnb:after {
+      display: none;
+    }
+  }
+
+  > .link_gnb {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 60px;
+    height: 60px;
+    color: #363636;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -32px;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 12px;
+      background: #dedede;
+    }
+  }
+}
+
+.line {
+  z-index: 100;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #3c67e1;
+  transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.list_sub {
+  display: flex;
+  margin-left: 475px;
+  height: 60px;
+
+  &.type01 {
+  }
+  &.type02 {
+  }
+}
+
+.header__block--flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+//HEADER UTIL
+.header_util__list {
+  float: right;
+  display: flex;
+  height: 80px;
+}
+
+.header_util__list--item {
+  margin-right: 20px;
+  align-self: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

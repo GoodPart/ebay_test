@@ -1,0 +1,19 @@
+<li class="prd-item">
+  <div class="prd-item__thumb">
+    <img src="@@imgSrc" width="100%">
+    @@if(context.expand) {
+      <div class="prd-expand" data-sal="slide-up" style="--sal-duration: 1s; --sal-delay: 1.5s;">
+        <img src="@@expand" width="@@expandSize">
+      </div>
+    }
+  </div>
+  <div class="prd-item__info">
+    <p class="prd-item__name">
+      @@name
+    </p>
+    <p class="prd-item__price">
+      @@price
+    </p>
+  </div>
+  
+</li>

@@ -1,0 +1,144 @@
+.layout-footer {
+  position: relative;
+  background: #fafafa;
+  width: 100%;
+}
+.layout-footer_inner {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 90px;
+  font-family: 'NanumBarunGothic';
+}
+
+.layout-footer__top {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.layout-footer-sns {
+  background: orange;
+}
+
+.layout-footer__container {
+  float: left;
+  opacity: 0.7;
+
+  &.sns {
+    float: right;
+
+    .layout-footer__item {
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.layout-footer__item {
+  float: left;
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+  // width: 40px;
+}
+
+.layout-footer__link {
+  width: 100%;
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+
+  img {
+    width: 100%;
+  }
+}
+
+.layout-footer__infoBox {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.layout-footer__logo {
+  .layout-footer__link {
+    display: block;
+    width: 113px;
+    margin: 0 auto;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.layout-footer__bot {
+  margin-top: 50px;
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .layout-footer__left {
+    width: 60%;
+    float: left;
+    line-height: 23px;
+
+    .left_txt {
+      opacity: 0.7;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 23px;
+      // margin-bottom: 10px;
+
+      &.lt1 {
+        margin-top: 40px;
+      }
+    }
+  }
+  .layout-footer__right {
+    width: 15%;
+    float: right;
+    line-height: 26px;
+    opacity: 0.7;
+
+    .right_txt {
+      letter-spacing: 0.02em;
+      line-height: 26px;
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 8px;
+      text-align: right;
+      display: block;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.signup_check {
+  text-decoration: underline;
+}
+
+.copyright {
+  line-height: 48px;
+  padding: 44px 0 54px;
+  font-size: 13px;
+  color: #999999;
+}

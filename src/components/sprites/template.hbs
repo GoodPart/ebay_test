@@ -1,0 +1,16 @@
+{{#spritesheet}}
+  .{{name}} {
+    background-image: url({{escaped_image}});
+    background-size: {{returnpx width}} {{returnpx height}};
+  }
+{{/spritesheet}}
+{{sort sprites}}
+{{#sprites}}
+  .sprite-{{getFolder}}-{{name}} {
+    width: {{returnpx width}};
+    height: {{returnpx height}};
+    background-position: {{returnpx offset_x}} {{returnpx offset_y}};
+  }
+{{/sprites}}
+
+
