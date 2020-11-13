@@ -14,6 +14,7 @@ const cardSwiper = new Swiper('.swiper-container__card', {
 })
 
 const cardSwiperFull = new Swiper('.swiper-container__card--full', {
+  loop: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',

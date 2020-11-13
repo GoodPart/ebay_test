@@ -179,7 +179,7 @@ const sprites = () => {
               });
             },
             returnpx: function(num) {
-              return num / 2 + 'px';
+              return num + 'px';
             },
             getFolder: function() {
               return sprite;

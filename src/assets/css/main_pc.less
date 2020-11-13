@@ -1,9 +1,18 @@
 @import '../../components/fonts/index.less';
+@import '../../components/sprites/sprite-icon.less';
 
-//LINK CSS
+@medium : 500;
+@bold : 600;
+@regular : 400;
+
+.sprite-icon {
+  display: block;
+}
+
 .__link {
   display: block;
 }
+//LINK CSS
 
 .main {
   margin: 0 auto;
@@ -14,6 +23,11 @@
 .main__section {
   position: relative;
   width: 100%;
+
+  &~& {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
 }
 
 .main__section--inner {
@@ -22,6 +36,63 @@
 }
 
 //main css
+
+.section__header {
+  text-align: center;
+  font-size: 56px;
+  // line-height: 40px;
+  line-height: 62px;
+  letter-spacing: -0.075em;
+}
+.section__body {
+  margin-top: 60px;
+}
+
+.section__list {
+  position: relative;
+  width: 100%;
+
+  &.section__list--row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &.section__list--column {
+    display: flex;
+    flex-direction: column;
+  }
+  .section__list--item {
+    width: 370px;
+    margin-right: 46px;
+  }
+}
+//section css
+
+.item_thumb {
+  width: 100%;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.item_info {
+  margin-top: 50px;
+  text-align: center;
+}
+.item_info__title {
+  font-weight: @medium;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: -0.06em;
+}
+.item_info__desc {
+  font-weight: @regular;
+  margin-top: 25px;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.04em;
+  color: #555555;
+}
 
 .link__box {
   width: 168px;
@@ -43,13 +114,12 @@
   background: #3c67e1;
   color: #fff;
 }
-
 //link css
 
 .main__section--visual {
   .cont {
     position: absolute;
-    top: 138px;
+    top: 191px;
     left: 360px;
     width: 600px;
   }
@@ -63,16 +133,23 @@
     font-size: 65px;
     line-height: 86px;
     letter-spacing: -0.02em;
-    font-weight: 600;
+    font-weight: @bold;
   }
   .desc {
     margin-top: 17px;
     font-size: 24px;
     line-height: 38px;
     letter-spacing: -0.03em;
-    font-weight: 300;
+    font-weight: @regular;
   }
   .desc + .link__box {
     margin-top: 62px;
+  }
+}
+
+.main__section--reason {
+  background-color: #323c57;
+  .section__header {
+    color: #fff;
   }
 }
