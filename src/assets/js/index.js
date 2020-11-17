@@ -82,3 +82,8 @@ headerListItem.forEach(menu=> {
       menu.classList.remove("on")
   })
 })
+
+const header = document.querySelector(".header");
+const createDiv = document.createElement("div");
+createDiv.className="nav_bg";
+header.appendChild(createDiv);
