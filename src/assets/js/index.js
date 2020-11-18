@@ -1,5 +1,9 @@
 import Swiper from 'swiper';
 import AOS from 'aos';
+// import 'aos/dist/aos'
+
+
+AOS.init();
 
 const cardSwiper = new Swiper('.swiper-container__card', {
   loop: true,
